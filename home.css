@@ -1,0 +1,165 @@
+/* Global styles */
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://c0.wallpaperflare.com/preview/617/157/272/japan-punyus-shibuya-ku-shopping-mall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: transparent;
+}
+.black
+{
+    background-color: #111111;
+    background-image: url('https://c0.wallpaperflare.com/preview/617/157/272/japan-punyus-shibuya-ku-shopping-mall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    font-size: 120px;
+    position: relative;
+    text-shadow: 0 0 10px #fff;
+    background-color: black;
+}
+
+h1::before,
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+h1::before {
+    color: #111111;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+h1::after {
+    color: #111111;
+    z-index: -2;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.talenthouse.com%2Fitem%2F1933935%2F51e9d80f&psig=AOvVaw1xhUeJArYn2dyBCOW6sAjK&ust=1685615001643000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMiOlq2rn_8CFQAAAAAdAAAAABAj');
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url('');
+    text-align: center;
+}
+
+.hero-content {
+    animation: fade-in 2s ease;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    color: #fff;
+}
+
+/* Additional Animations */
+.sparkles {
+    position: fixed;
+    font-size:50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: url('https://i.pinimg.com/originals/1b/a5/c0/1ba5c0ce0dc5a1dbec0d8669a69ca118.gif');
+    background-size: 200px;
+    animation: sparkles-fade 6s infinite;
+}
+
+@keyframes sparkles-fade {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+.footer-animation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: footer-slide 10s infinite;
+}
+
+@keyframes footer-slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
